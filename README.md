@@ -213,7 +213,7 @@ The exporter supports TLS via a new web configuration file.
 ./node_exporter --web.config=web-config.yml
 ```
 
-See the [https package](https/README.md) for more details.
+See the [exporter-toolkit https package](https://github.com/prometheus/exporter-toolkit/blob/v0.1.0/https/README.md) for more details.
 
 ## Using Docker
 The `node_exporter` is designed to monitor the host system. It's not recommended
