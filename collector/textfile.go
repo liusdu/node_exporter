@@ -63,6 +63,12 @@ func NewTextFileCollector(logger log.Logger) (Collector, error) {
 	return c, nil
 }
 
+// SetTextFileCollectorPath sets textFileDirectory, it is useful when this collect as
+// a third-party package
+func SetTextFileCollectorPath(path string) {
+	textFileDirectory = &path
+}
+
 func convertMetricFamily(metricFamily *dto.MetricFamily, ch chan<- prometheus.Metric, logger log.Logger) {
 	var valType prometheus.ValueType
 	var val float64
